@@ -35,6 +35,15 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
+    - name: Docker build then push
+      uses: tegarimansyah/docker_build_push@main
+      with:
+         image: sandeepdulam19/cicdrunner-docker
+         registry: docker.io
+         username: ${{ secrets.Sandeep }}
+         password: ${{ secrets.PASSWORD }}
+      
+
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
