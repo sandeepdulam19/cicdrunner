@@ -40,7 +40,7 @@ jobs:
       with:
          image: sandeepdulam19/cicdrunner-docker
          registry: docker.io
-         username: ${{ secrets.Sandeep }}
+         username: ${{ secrets.SANDEEP }}
          password: ${{ secrets.PASSWORD }}
       
 
